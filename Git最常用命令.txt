@@ -1,0 +1,10 @@
+>git status -s
+显示上次提交之后所更改或者写入索引的改动
+
+
+
+
+【git diff】
+git diff：显示副本与索引的差别
+git diff --cached：显示索引与快照的差别
+git diff head：显示副本与快照的差别（无视索引）

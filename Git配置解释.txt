@@ -1,0 +1,22 @@
+>C:\Users\ChenShao\.gitconfig
+
+比较工具
+[difftool "sourcetree"]
+	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+合并工具
+[mergetool "sourcetree"]
+	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+
+本地用户和邮箱
+[user]
+	name = ChenShao
+	email = chenshaoxin@gmail.com
+
+存储密码（将生成C:\Users\ChenShao\.git-credentials，并且明文保存密码！！！）
+[credential] 
+	helper = store 
+
+禁止自动转码（正常显示中文，不显示：\344\275\223\351\252\214.txt）
+[core]
+	quotepath = false
