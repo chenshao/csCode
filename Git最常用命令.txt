@@ -1,10 +1,17 @@
->git status -s
-��ʾ�ϴ��ύ֮�������Ļ���д�������ĸĶ�
+【git status】
+>git status -s：
+显示上次提交之后所更改或者写入索引的改动（绿M：更改已写入索引；红M：更改未写入索引－－可同时出现）
 
+【git diff】
+>git diff：
+显示副本与索引的差别
+>git diff --cached：
+显示索引与快照的差别
+>git diff head：
+显示副本与快照的差别（无视索引）
 
-
-
-��git diff��
-git diff����ʾ�����������Ĳ��
-git diff --cached����ʾ��������յĲ��
-git diff head����ʾ��������յĲ������������
+【git archive】
+>git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)：
+导出最后一次提交修改过的文件
+>git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)：
+导出两次提交之间修改过的文件
