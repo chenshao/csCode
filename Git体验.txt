@@ -13,6 +13,8 @@
 提交（commit）：
 	提交索引中的文件到快照中（如果修改后没有加入索引，将不会被提交）
 	可以写日志
+	可以用git commit --amend修改最后一次提交的日志
+	可以用git rebase、git commit --amend、git rebase --continue修改历史版本的提交日志（包括已push）
 提交后再修改（add、commit）：
 	再次加入索引，再次提交快照
 推送（push）：

@@ -23,7 +23,11 @@
 提交快照，添加日志
 >git commit --amend
 修改最后一次commit的日志内容
-git commit rebase
+>git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
+修改历史commit的日志内容
 
-reset
-【git reset】
+【git log】
+>git log
+查看所有commit日志
+>git log -p [commit号]
+查看某次commit日志
