@@ -1,8 +1,13 @@
 >C:\Users\ChenShao\.gitconfig
 
-比较工具
+比较工具（兼容sourcetree的配置，如果不需要兼容，配置为“bc4”）
+[diff]
+	tool = sourcetree
+[difftool]
+	prompt = false
 [difftool "sourcetree"]
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
 合并工具
 [mergetool "sourcetree"]
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
@@ -17,6 +22,9 @@
 [credential] 
 	helper = store 
 
-禁止自动转码（正常显示中文，不显示：\344\275\223\351\252\214.txt）
 [core]
+	禁止自动转码（正常显示中文文件名，不显示：\344\275\223\351\252\214.txt）
 	quotepath = false
+	默认编辑器改为EmEditor（需要先把emeditor执行路径[E:\EmEditor\SetUp]加入到系统变量Path中）
+	###注意：只有退出EmEditor，Git才会接到到正确的退出码，如果只是关闭EmEditor当前标签页的话，Git是不会有动静的！
+	editor = emeditor
