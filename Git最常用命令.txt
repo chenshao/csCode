@@ -31,3 +31,19 @@
 查看所有commit日志
 >git log -p [commit号]
 查看某次commit日志
+
+【git reset】
+>git reset HEAD [ -- hello.txt]
+取消索引（与git add 对应）
+
+【git branch】
+>git branch
+列出可用的分支
+>git branch $branchname
+创建新分支$branchname
+
+
+
+
+
+
