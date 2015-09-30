@@ -37,6 +37,7 @@
 取消索引（与git add 对应）
 
 【git branch】
+*** 新增的文件，必须是commit之后，才算是新分支的文件 ***
 >git branch
 列出可用的分支
 >git branch $branchname
