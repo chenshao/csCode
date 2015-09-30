@@ -9,6 +9,10 @@
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\"
 	trustExitCode = true
 合并工具
+[merge]
+	tool = sourcetree
+[mergetool]
+	prompt = false
 [mergetool "sourcetree"]
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
