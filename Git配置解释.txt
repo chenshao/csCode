@@ -29,3 +29,10 @@
 [core]
 	禁止自动转码（正常显示中文文件名，不显示：\344\275\223\351\252\214.txt）
 	quotepath = false
+[i18n]
+	提交和显示的日志编码（防止提交gbk文件时，日志乱码）
+	commitencoding = gbk
+	logoutputencoding = utf-8
+[gui]
+	设置UI界面显示的编码（防止乱码）
+	encoding = utf-8
