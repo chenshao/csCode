@@ -47,9 +47,10 @@
 列出可用的分支
 >git branch $branchname
 创建新分支$branchname
-
-
-
+>git checkout -b $branchname
+创建新分支$branchname，并立即切换到它
+>git branch -d $branchname
+删除分支$branchname
 
 
 
