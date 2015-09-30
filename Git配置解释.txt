@@ -34,5 +34,5 @@
 	commitencoding = gbk
 	logoutputencoding = utf-8
 [gui]
-	设置UI界面显示的编码（不明白具体作用中文中文）
+	设置UI界面显示的编码（不明白具体作用，暂时未配置）
 	encoding = utf-8
