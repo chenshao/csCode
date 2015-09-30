@@ -52,5 +52,5 @@
 >git branch -d $branchname
 删除分支$branchname
 
-这是中文呢
+这是中文呢中文
 
