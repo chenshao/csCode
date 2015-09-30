@@ -1,6 +1,6 @@
 >C:\Users\ChenShao\.gitconfig
 
-±È½Ï¹¤¾ß£¨¼æÈİsourcetreeµÄÅäÖÃ£¬Èç¹û²»ĞèÒª¼æÈİ£¬ÔòËæ±ãÅäÖÃ£¬ÀıÈç£ºbc4£©
+æ¯”è¾ƒå·¥å…·ï¼ˆå…¼å®¹sourcetreeçš„é…ç½®ï¼Œå¦‚æœä¸éœ€è¦å…¼å®¹ï¼Œåˆ™éšä¾¿é…ç½®ï¼Œä¾‹å¦‚ï¼šbc4ï¼‰
 [diff]
 	tool = sourcetree
 [difftool]
@@ -8,7 +8,7 @@
 [difftool "sourcetree"]
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\"
 	trustExitCode = true
-ºÏ²¢¹¤¾ß
+åˆå¹¶å·¥å…·
 [merge]
 	tool = sourcetree
 [mergetool]
@@ -17,15 +17,15 @@
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 
-±¾µØÓÃ»§ºÍÓÊÏä
+æœ¬åœ°ç”¨æˆ·å’Œé‚®ç®±
 [user]
 	name = ChenShao
 	email = chenshaoxin@gmail.com
 
-´æ´¢ÃÜÂë£¨½«Éú³ÉC:\Users\ChenShao\.git-credentials£¬²¢ÇÒÃ÷ÎÄ±£´æÃÜÂë£¡£¡£¡£©
+å­˜å‚¨å¯†ç ï¼ˆå°†ç”ŸæˆC:\Users\ChenShao\.git-credentialsï¼Œå¹¶ä¸”æ˜æ–‡ä¿å­˜å¯†ç ï¼ï¼ï¼ï¼‰
 [credential] 
 	helper = store 
 
 [core]
-	½ûÖ¹×Ô¶¯×ªÂë£¨Õı³£ÏÔÊ¾ÖĞÎÄÎÄ¼şÃû£¬²»ÏÔÊ¾£º\344\275\223\351\252\214.txt£©
+	ç¦æ­¢è‡ªåŠ¨è½¬ç ï¼ˆæ­£å¸¸æ˜¾ç¤ºä¸­æ–‡æ–‡ä»¶åï¼Œä¸æ˜¾ç¤ºï¼š\344\275\223\351\252\214.txtï¼‰
 	quotepath = false
