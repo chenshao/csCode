@@ -52,9 +52,11 @@
 >git branch -d $branchname
 删除分支$branchname
 
+【git merge】
+>git merge
+将另一个分支并入当前的分支中去
 
-
-
-
+【git mergetool】
+使用外部工具（如BeyondCompare）进行合并
 
 
