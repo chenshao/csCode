@@ -1,19 +1,26 @@
 【git status】
->git status -s：
+>git status -s
 显示上次提交之后所更改或者写入索引的改动（绿M：更改已写入索引；红M：更改未写入索引－－可同时出现）
 
 【git diff】－－diff换为difftool，使用外部工具（如BeyondCompare）进行比较
->git diff：
+主要使用的2个主要情况
+1.查看两个分支彼此之间的差值
+2.查看自发布或者某个旧历史点之后的差值
+>git diff
 显示副本与索引的差别
->git diff --cached：
+>git diff --cached
 显示索引与快照的差别
->git diff head：
+>git diff head
 显示副本与快照的差别（无视索引）
+>git diff master.. test
+显示分支master与分支test的差别
+>git diff [$tagname]
+显示自打上标签$tagname之后的差值
 
 【git archive】
->git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)：
+>git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
 导出最后一次提交修改过的文件
->git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)：
+>git archive -o ../latest.zip NEW_COMMIT_ID_HERE $(git diff --name-only OLD_COMMIT_ID_HERE NEW_COMMIT_ID_HERE)
 导出两次提交之间修改过的文件
 
 【git commit】
@@ -45,6 +52,17 @@
 只显示分支$branchname的且不包括主分支master的日志（即显示$branchname的唯一日志）
 >git log --decorate
 可在日志中显示标签
+
+>git log --author
+只寻找某个特定作者（名字或邮箱，大小写敏感）的提交（如：$ git log --author=ChenShao）
+>git log --since --before、git log --until --after
+根据日期过滤提交记录（如：$ git log --oneline --before={3.weeks.ago} --after={2010-04-18}）
+>git log --grep
+根据提交注释过滤提交记录（如：$ git log --grep=乱码）
+>git log --grep=乱码 --grep=EmEditor
+搜索“乱码”或“EmEditor”
+>git log --grep=乱码 --grep=EmEditor --all-match
+搜索“乱码”并且包含“EmEditor”
 
 【git tag】
 >git tag -a v1.0
@@ -82,5 +100,4 @@
 
 【git mergetool】
 使用外部工具（如BeyondCompare）进行合并
-
 
