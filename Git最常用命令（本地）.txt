@@ -34,7 +34,7 @@
 >git commit --amend
 修改最后一次commit的日志内容
 >git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
-修改历史commit的日志内容
+修改历史commit的日志内容（把需要修改日志内容的那个commit号前的“pick”改为“edit”）
 
 【git log】
 >git log
@@ -108,9 +108,9 @@
 
 【git rebase】
 >git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
-合并提交（把第1个commit号前的“pick”改为“squash”）
->git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
-修改历史commit的日志内容（把第1个commit号前的“pick”改为“edit”）
+修改历史commit的日志内容（把需要修改日志内容的那个commit号前的“pick”改为“edit”）
+>git rebase -i [commit号(需要修改的那个commit的前一个hash码)]
+合并提交（把第2行起，commit号前的“pick”全部改为“squash”，即第2行起的提交，全部合并到第1行中去）
 >git rebase -i HEAD~[number_of_commits]
 合并提交、修改历史的另一种命令（用于最后n个提交）
 例如：合并最后两次提交

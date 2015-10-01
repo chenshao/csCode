@@ -33,5 +33,4 @@
   git reset 是撤销某次提交，但是此次之后的修改都会被退回到暂存区
 
 【待测试】
-1.合并commit
-2.区别：revert、reset、rebase
+1.区别：revert、reset、rebase
