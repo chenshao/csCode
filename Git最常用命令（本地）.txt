@@ -43,12 +43,18 @@
 开启了拓扑图选项；查看历史中什么时候出现了分支、合并
 >git log $branchname ^master
 只显示分支$branchname的且不包括主分支master的日志（即显示$branchname的唯一日志）
+>git log --decorate
+可在日志中显示标签
 
 【git tag】
 >git tag -a v1.0
-创建一个带注解的标签（给最新一次提交打上（HEAD）“v1.0”的标签）
+创建一个带备注的标签（给最新一次提交打上（HEAD）“v1.0”的标签）
 >git tag -a v1.0 $commit
 给某次提交打上标签
+>git tag -d $tagname
+删除标签$tagname
+>git tag -l -n
+标签列表及其备注
 
 【git reset】
 >git reset HEAD [ -- hello.txt]
