@@ -17,13 +17,13 @@
 	cmd = 'E:/BeyondCompare/SetUp/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 
-本地用户和邮箱
 [user]
+	本地用户和邮箱
 	name = ChenShao
 	email = chenshaoxin@gmail.com
 
-存储密码（将生成C:\Users\ChenShao\.git-credentials，并且明文保存密码！！！）
 [credential] 
+	存储密码（将生成C:\Users\ChenShao\.git-credentials，并且明文保存密码！！！）
 	helper = store 
 
 [core]
@@ -34,5 +34,9 @@
 	commitencoding = gbk
 	logoutputencoding = utf-8
 [gui]
-	设置UI界面显示的编码（不明白具体作用，暂时未配置）
+	设置UI界面显示的编码（指$gitk命令打开的UI界面）
 	encoding = utf-8
+命令别名
+[alias]
+	logs = log --pretty=format:'%h -%an,%ar:%s'
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=iso

@@ -28,9 +28,27 @@
 
 【git log】
 >git log
-查看所有commit日志
->git log -p [commit号]
-查看某次commit日志
+查看所有日志
+>git log $commit
+查看从$commit版本及之前的日志
+>git log --stat
+显示简要的增改行数统计,每次提交文件的变更统计
+>git log -p
+查看详细日志（比--stat更加详细）
+>git log --oneline
+单行显示，只显示短哈希字串和提交说明
+>git log --pretty=oneline
+单行显示，只显示长哈希字串和提交说明
+>git log --graph
+开启了拓扑图选项；查看历史中什么时候出现了分支、合并
+>git log $branchname ^master
+只显示分支$branchname的且不包括主分支master的日志（即显示$branchname的唯一日志）
+
+【git tag】
+>git tag -a v1.0
+创建一个带注解的标签（给最新一次提交打上（HEAD）“v1.0”的标签）
+>git tag -a v1.0 $commit
+给某次提交打上标签
 
 【git reset】
 >git reset HEAD [ -- hello.txt]
