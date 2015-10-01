@@ -29,9 +29,9 @@
 	没得选择提交哪些修改过的文件（推送时，推送的是快照，而不是文件！！！）
 	其实，提交到本地快照中，就相当于svn提交到服务器中了！！！
 2.可以设置EmEditor设置为Git的编辑器，步骤参照：D:\doNet\Soft\Git\EmEditor配置为Git的编辑器.txt
+3.git revert 是撤销某次操作，此次操作之前的commit都会被保留
+  git reset 是撤销某次提交，但是此次之后的修改都会被退回到暂存区
 
 【待测试】
 1.合并commit
-2.fetch、pull……的区别
-3.git revert 是撤销某次操作，此次操作之前的commit都会被保留
-4.git reset 是撤销某次提交，但是此次之后的修改都会被退回到暂存区
+2.区别：revert、reset、rebase

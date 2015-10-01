@@ -6,16 +6,19 @@
 主要使用的2个主要情况
 1.查看两个分支彼此之间的差值
 2.查看自发布或者某个旧历史点之后的差值
+注意：几乎每一次你要对比两个分支的时候，你都会想用中间三个点的语法，因为它通常会给你你想要的。
 >git diff
 显示副本与索引的差别
 >git diff --cached
 显示索引与快照的差别
 >git diff head
 显示副本与快照的差别（无视索引）
->git diff master.. test
+>git diff master...test
 显示分支master与分支test的差别
 >git diff [$tagname]
 显示自打上标签$tagname之后的差值
+>git diff [$tagname1]...[$tagname2]
+显示自打上标签$tagname到$tagname2的差值
 
 【git archive】
 >git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
@@ -48,6 +51,8 @@
 单行显示，只显示长哈希字串和提交说明
 >git log --graph
 开启了拓扑图选项；查看历史中什么时候出现了分支、合并
+>git log --all
+显示所有分支的日志
 >git log $branchname ^master
 只显示分支$branchname的且不包括主分支master的日志（即显示$branchname的唯一日志）
 >git log --decorate
@@ -100,4 +105,15 @@
 
 【git mergetool】
 使用外部工具（如BeyondCompare）进行合并
+
+【git rebase】
+>git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
+合并提交（把第1个commit号前的“pick”改为“squash”）
+>git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
+修改历史commit的日志内容（把第1个commit号前的“pick”改为“edit”）
+>git rebase -i HEAD~[number_of_commits]
+合并提交、修改历史的另一种命令（用于最后n个提交）
+例如：合并最后两次提交
+git rebase -i HEAD~2
+
 
