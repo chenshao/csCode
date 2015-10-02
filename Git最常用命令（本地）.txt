@@ -69,6 +69,10 @@
 >git log --grep=乱码 --grep=EmEditor --all-match
 搜索“乱码”并且包含“EmEditor”
 
+【git reflog】
+>git reflog
+列出曾经写过的备注内容
+
 【git tag】
 >git tag -a v1.0
 创建一个带备注的标签（给最新一次提交打上（HEAD）“v1.0”的标签）
@@ -78,10 +82,6 @@
 删除标签$tagname
 >git tag -l -n
 标签列表及其备注
-
-【git reset】
->git reset HEAD [ -- hello.txt]
-取消索引（与git add 对应）
 
 【git branch】
 /** 
@@ -104,7 +104,7 @@
 将另一个分支并入当前的分支中去
 
 【git mergetool】
-使用外部工具（如BeyondCompare）进行合并
+	使用外部工具（如BeyondCompare）进行合并
 
 【git rebase】
 >git rebase -i [commit号(需要修改的那个commit的前一个hash码)]、git commit --amend、git rebase --continue
@@ -113,7 +113,28 @@
 合并提交（把第2行起，commit号前的“pick”全部改为“squash”，即第2行起的提交，全部合并到第1行中去）
 >git rebase -i HEAD~[number_of_commits]
 合并提交、修改历史的另一种命令（用于最后n个提交）
-例如：合并最后两次提交
-git rebase -i HEAD~2
+例如，合并最后两次提交：git rebase -i HEAD~2
+注意：其实，通过git reset --soft $commit的方法，可以将原来多次的git提交记录合并为一个
 
+【git revert】
+	注意：revert没有 --soft --mixed --hard 选项
+>git revert $commit
+撤销$commit提交（还原源代码，如果和之后提交的源代码有冲突，会提示冲突后再revert；这时可用git reset head重置）；
+不影响之前的提交（日志全部保留），而且将新增一个commit；
+相当于，在当前版本上，把$commit的修改进行还原并提交
 
+【git reset】
+注意：其实，通过git reset --soft $commit的方法，可以将原来多次的git提交记录合并为一个
+>git reset $commit
+恢复到$commit版本后的状态；即$commit之后的提交全部重置（但源码不修改）；
+注意：不包含$commit版本，$commit版本还是保持不变的，影响的是$commit之后的版本；
+git reset --soft :取消了commit
+git reset --mixed（默认）:取消了commit ，取消了add（重新提交时需要重新add）
+git reset --hard :取消了commit ，取消了add，还原源码修改（文件全部被还原，也就无所谓add了）
+	***强烈注意：--hard会把本地未提交的修改，也还原到$commit版本－－非常危险，谨慎使用－－可使用keep来代替
+git reset --keep :取消了commit ，取消了add，还原源码修改
+	保留本地未提交的修改（保留现有版本，不还原到$commit版本）
+	一般用于还原至某一版本（标签）：git reset --keep $tagname
+>git reset
+取消索引（与git add . 对应）
+针对某个文件取消索引：git reset hello.txt
