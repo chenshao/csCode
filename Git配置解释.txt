@@ -37,8 +37,8 @@
 	设置UI界面显示的编码（指$gitk命令打开的UI界面）
 	encoding = utf-8
 [svn]
-	支持中文路径
-	pathnameencoding = gbk
+	支持中文路径（设置了之后更变乱码了，所以谨慎！！！！！）
+	#pathnameencoding = gbk
 命令别名
 [alias]
 	logs = log --pretty=format:'%h -%an,%ar:%s'
