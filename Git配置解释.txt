@@ -24,7 +24,7 @@
 
 [credential] 
 	存储密码（将生成C:\Users\ChenShao\.git-credentials，并且明文保存密码！！！）
-	helper = store 
+	helper = store
 
 [core]
 	禁止自动转码（正常显示中文文件名，不显示：\344\275\223\351\252\214.txt）
@@ -36,6 +36,9 @@
 [gui]
 	设置UI界面显示的编码（指$gitk命令打开的UI界面）
 	encoding = utf-8
+[svn]
+	支持中文路径
+	pathnameencoding = gbk
 命令别名
 [alias]
 	logs = log --pretty=format:'%h -%an,%ar:%s'
